@@ -6,7 +6,7 @@ Week 4 challenge to build a finance app using Javascript.
 A project to use Javascript.
 
 - Used arrays and various functions.
-- Commented HTML and CSS files.
+- Commented Javascipt files.
 - Published at [(https://franciswilkinson.github.io/Console-Finances/)](linkurlhttps://franciswilkinson.github.io/Console-Finances/)
 
 ![Console-Finances](https://github.com/franciswilkinson/Console-Finances/blob/main/images/Screenshot.png "Console-Finances")

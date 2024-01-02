@@ -1,7 +1,9 @@
+// Initialize variables for total months.
 var totalMonths = 0;
 var i = 0;
 var total = 0;
 
+//finances array
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
