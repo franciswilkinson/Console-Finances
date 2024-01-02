@@ -3,7 +3,7 @@ var totalMonths = 0;
 var i = 0;
 var total = 0;
 
-//finances array
+//Finances array
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -93,16 +93,19 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+//Gets length of finance array
 totalMonths = finances.length;
 console.log("Financial Analysis" + '\n' +  "------------------" );
 console.log("Total Months: " + totalMonths);
 
+//Initialize variables
 var change = [];
 var value = 0;
 var first = [];
 var second = [];
 var aveChanges = 0;
 
+// for loop to populate the change array
 for(i; i<finances.length; i++)  {
   value = finances[i][1];
   total += finances[i][1];
@@ -113,30 +116,37 @@ for(i; i<finances.length; i++)  {
   }
 }
 
+//Makes a copy of the change array before sorting
 changeCopy = [...change];
 
+//Adds up the amounts in the change array
 var sum = 0;
 for (n of change) {
   sum += n;
 }
 
-
-
+//Sorts the change array 
 change.sort(function(a, b){
   return b-a;
 });
 
-GI = change[0];
-GD = change[change.length-1];
+//Gets value of the first and last elements of the array.
+var GI = change[0];
+var GD = change[change.length-1];
 
+//Finds the values of GI and returns its index. 
 var GreatestIncrease = changeCopy.indexOf(GI);
+//Uses index of GI + 1 to find the month GI happened.
 var GI_date = finances[GreatestIncrease+1][0];
 
+//Finds the values of GD and returns its index.
 var GreatestDecrease = changeCopy.indexOf(GD);
+//Uses index of GD + 1 to find the month GD happened.
 var GD_date = finances[GreatestDecrease+1][0];
 
-
+//Finds the Average of the changes in Profits/Losses.
 var aveChanges = sum/(totalMonths - 1);
+//Prints to console
 console.log("Total: " + total);
 console.log("Average Change: " + aveChanges.toFixed(2));
 console.log("Greatest Increase in Profits/Losses: " + GI_date + " $(" + change[0] + ")");
