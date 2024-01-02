@@ -18,11 +18,11 @@ N/A
 
 ## Usage
 
-To use this webpage, you can look around to see how it is built using Bootstrap. 
+To use this webpage, you can look around to see how it is built using Javascript.
 
 ## Credits
 
-Some blocks of code have been reused and customised from the bootcamp's week three practice exercises.
+N/A
 
 ## License
 
