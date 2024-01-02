@@ -125,7 +125,7 @@ change.sort(function(a, b){
 });
 
 GI = change[0];
-GD = change[change.length-1];t 
+GD = change[change.length-1];
 
 var GreatestIncrease = changeCopy.indexOf(GI);
 var GI_date = finances[GreatestIncrease+1][0];
