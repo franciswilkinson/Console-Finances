@@ -1,3 +1,7 @@
+var totalMonths = 0;
+var i = 0;
+var total = 0;
+
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -86,3 +90,56 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+totalMonths = finances.length;
+console.log("Financial Analysis" + '\n' +  "------------------" );
+console.log("Total Months: " + totalMonths);
+
+var change = [];
+var value = 0;
+var first = [];
+var second = [];
+var aveChanges = 0;
+
+for(i; i<finances.length; i++)  {
+  value = finances[i][1];
+  total += finances[i][1];
+  first[i] = value;
+  second[i] = first[i];
+  for(var j = 0; j<finances.length-1;j++){
+  change[j] = second[j+1]-first[j];
+  }
+}
+
+changeCopy = [...change];
+
+var sum = 0;
+for (n of change) {
+  sum += n;
+}
+
+
+
+change.sort(function(a, b){
+  return b-a;
+});
+
+GI = change[0];
+GD = change[change.length-1];t 
+
+var GreatestIncrease = changeCopy.indexOf(GI);
+var GI_date = finances[GreatestIncrease+1][0];
+
+var GreatestDecrease = changeCopy.indexOf(GD);
+var GD_date = finances[GreatestDecrease+1][0];
+
+
+var aveChanges = sum/(totalMonths - 1);
+console.log("Total: " + total);
+console.log("Average Change: " + aveChanges.toFixed(2));
+console.log("Greatest Increase in Profits/Losses: " + GI_date + " $(" + change[0] + ")");
+console.log("Greatest Decrease in Profits/Losses: " + GD_date + " $(" + change[change.length-1] + ")");
+
+
+
+
